@@ -69,6 +69,26 @@ justify-content:space-evenly;
 .options {
 display:inline-block;
 }
+.main{
+    background-image:url(image.jpg);
+    height:400px;
+    background-size:cover;
+}
+.shopping {
 
+    display:flex;
+    justify-content:evenly;
+    background-color: rgb(167, 164, 161);
+}
+.box{
+    height:400px;
+    width:25%;
+    background-color: azure;
+    padding:20px opx 15px;
+}
+
+.pht{
+    height:300px;
+}
 
 
