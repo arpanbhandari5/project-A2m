@@ -10,7 +10,7 @@
 }
 .navbar{
     height: 60px;
-    background-color:#0F1111;
+    background-color:#5f8686;
     color:white;
     display:flex;
     align-items:center;
@@ -39,7 +39,7 @@ justify-content:space-evenly;
 }
 .nav-search{
     display:flex;
-    background-color:black;
+    background-color:rgb(236, 230, 230);
     height:40px;
     width:1085px;
     color:white;
@@ -48,10 +48,14 @@ justify-content:space-evenly;
  
 }
 .element{
-    background-color: blueviolet;
+    background-color: rgb(236, 229, 242);
     width:25px;
     text-align: center;
     border:none;
+}
+.search-icon{
+    border:2px solid white;
+    background-color: rgb(113, 113, 102);
 }
 .list{
     width:500px;
@@ -78,7 +82,7 @@ display:inline-block;
 
     display:flex;
     justify-content:evenly;
-    background-color: rgb(167, 164, 161);
+    background-color: rgb(247, 246, 245);
 }
 .box{
     height:400px;

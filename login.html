@@ -1,62 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>
-		Form validation using HTML and JavaScript
-	</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .t2k{
+        background-image:url("./shopping.jpg");
+        height:600%;
+        padding:6px;
+        font: size 23px;
+    }
+    </style>
 </head>
-
 <body>
-	<h1 style="text-align: center;">
-		REGISTRATION FORM
-	</h1>
-	<form name="RegForm" onsubmit="return GEEKFORGEEKS()"
-		method="post">
-		<p>
-			Name:
-			<input type="text" size="65" name="Name" />
-		</p>
-		<br />
-		<p>
-			Address:
-			<input type="text" size="65" name="Address" />
-		</p>
-		<br />
-		<p>
-			E-mail Address:
-			<input type="text" size="65" name="EMail" />
-		</p>
-		<br />
-		<p>
-			Password:
-			<input type="text" size="65" name="Password" />
-		</p>
-		<br />
-		<p>
-			Telephone:
-			<input type="text" size="65" name="Telephone" />
-		</p>
-		<br />
-		<p>
-			SELECT YOUR city
-			<select type="text" value="" name="Subject">
-				<option>pokhara</option>
-				<option>Ktm</option>
-				<option>Bharatpur</option>
-				<option>Bhaktapur</option>
-				<option>Lalitpur</option>
-			</select>
-		</p>
-		<br />
-		<br />
-		<p>
-			Comments:
-			<textarea cols="55" name="Comment"> </textarea>
-		</p>
-		<p>
-			<input type="submit" value="send" name="Submit" />
-			<input type="reset" value="Reset" name="Reset" />
-		</p>
-	</form>
+    <div class=" t2k">
+        <form action><h1>log in</h1>
+                    <div class="input-box">
+                        <p><b>User name</b></p><br>
+                        <input type="text" placeholder="Username" required>
+                        <i class='bx bxs-user'></i>
+                    </div><br><br>
+                    <div class="input-box">
+                        <p><b>Enter password</b></p><br>
+                        <input type="password" placeholder="Password" required>
+                        <i class='bx bxs-lock'></i>
+                    </div><br><br>
+                    <div class="remember-forget">
+                        <label><input type="checkbox" required> Remember me</label>
+                        <a href="#"><b>Forget Password?</b></a>
+                    </div><br><br>
+                    <div>
+                        <button type="submit" class="btn"><b>Log In</b></button></div>
+                    <div class="register-link"><br>
+                        <p><b>Don't have an account?</b><br><br>
+                            <a href="signup.html"><b></b>Sign up</b></a>
+                        </p>
+                    </div>
+        
+                </form>
+        </form>
+    </div>
+    
 </body>
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		#myForm{
+			border:2px solid black;
+			background-color:aquamarine;
+		}
+	.error {
+		color: red;
+	}
+	</style>
+	</head>
+	<body>
+	
+	<form id="myForm" onsubmit="return validateForm()">
+		<h2>Sign up details</h2>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name">
+		<span class="error" id="nameError"></span><br><br>
+	
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone">
+		<span class="error" id="phoneError"></span><br><br>
+	
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email">
+		<span class="error" id="emailError"></span><br><br>
+	
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password">
+		<span class="error" id="passwordError"></span><br><br>
+		<label> Re-enter Password:</label>
+		<input type="password" id="rePassword" name="rePassword">
+		<span class="error" id="rePasswordError"></span><br><br>
+		<label for ="address">Address</label>
+		<input type="address" id="address" name="address">
+		<span class="error" id="adderror" ></span><br>
+	
+		<button type="submit">Submit</button>
+	
+	</form>
+	
+	<script>
+	function validateForm() {
+		name = document.getElementById('name').value;
+		phone = document.getElementById('phone').value;
+		email = document.getElementById('email').value;
+		password = document.getElementById('password').value;
+		rePassword = document.getElementById('rePassword').value;
+	    address=document.getElementById('address').value;
+		nameError = document.getElementById('nameError');
+		phoneError = document.getElementById('phoneError');
+		emailError = document.getElementById('emailError');
+		passwordError = document.getElementById('passwordError');
+		rePasswordError = document.getElementById('rePasswordError');
+	     adderror=document.getElementById('adderor');
+		phonePattern = /^\d{10}$/;
+		emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+		passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+	    
+	
+		if (!name) {
+			nameError.textContent = ' Enter your correct name.';
+		} else {
+			nameError.textContent = '';
+		}
+	
+		if (!phone) {
+			phoneError.textContent = 'Please enter your phone number.';
+		} else if (!phonePattern.test(phone)) {
+			phoneError.textContent = 'Please enter a valid 10-digit phone number.';
+		} else {
+			phoneError.textContent = '';
+		}
+	
+		if (!email) {
+			emailError.textContent = 'Please enter your email address.';
+		} else if (!emailPattern.test(email)) {
+			emailError.textContent = 'Please enter a valid email address.';
+		} else {
+			emailError.textContent = '';
+		}
+	
+		if (!password) {
+			passwordError.textContent = 'Please enter a password.';
+		} else if (!passwordPattern.test(password)) {
+			passwordError.textContent = 'Password must have at least one uppercase letter, one lowercase letter, one digit, and be at least 6 characters long.';
+		} else {
+			passwordError.textContent = '';
+		}
+	
+		if (!rePassword) {
+			rePasswordError.textContent = 'Please re-enter your password.';
+		} else if (password !== rePassword) {
+			rePasswordError.textContent = 'Passwords do not match.';
+		} else {
+			rePasswordError.textContent = '';
+		}
+		if(!address){adderor.textcontent="enter correct address"}
+	
+		return !(nameError.textContent || phoneError.textContent || emailError.textContent || passwordError.textContent || rePasswordError.textContent||adderror.textcontent);
+	}
+	</script>
+	
+	</body>
+	</html>
+	
+
+
